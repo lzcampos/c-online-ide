@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>C Online IDE (TinyCC/GCC)</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<header>
+		<h1>C Online IDE</h1>
+		<p class="subtitle">Compile and run C code in your browser (server executes with TinyCC/GCC)</p>
+	</header>
+
+	<main>
+		<section class="editor-panel">
+			<label for="code">C source code</label>
+			<textarea id="code" spellcheck="false"></textarea>
+			<div class="controls">
+				<button id="btn-compile">Compile</button>
+				<button id="btn-run">Run</button>
+				<button id="btn-compile-run" class="primary">Compile & Run</button>
+				<span class="spacer"></span>
+				<button id="btn-clear">Clear Output</button>
+			</div>
+		</section>
+
+		<section class="io-panel">
+			<div class="stdin">
+				<label for="stdin">Program stdin (optional)</label>
+				<textarea id="stdin" placeholder="Input passed to the program's stdin"></textarea>
+			</div>
+			<div class="terminal">
+				<div class="term-header">Output</div>
+				<pre id="output" class="term-body"></pre>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<small>Note: Execution is limited (timeout ~4s). For best results, prefer TinyCC (tcc) installed on the server.</small>
+	</footer>
+
+	<script src="./main.js"></script>
+	<script>
+		// Initialize with a simple Hello World
+		const defaultCode = [
+			'#include <stdio.h>',
+			'',
+			'int main(void) {',
+			'    printf("Hello, world!\\n");',
+			'    return 0;',
+			'}',
+			''
+		].join('\n');
+		const codeEl = document.getElementById('code');
+		if (!codeEl.value.trim()) {
+			codeEl.value = defaultCode;
+		}
+	</script>
+</body>
+</html>
+
+

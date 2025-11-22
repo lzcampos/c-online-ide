@@ -1,0 +1,26 @@
+{
+  "name": "c-online-ide",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simple web app to compile and run C code using TinyCC/GCC via Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "keywords": [
+    "c",
+    "compiler",
+    "tinycc",
+    "tcc",
+    "gcc",
+    "node",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
