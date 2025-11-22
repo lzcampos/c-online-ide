@@ -2,6 +2,8 @@
 
 Simple web app to compile and run C code from your browser. The server compiles the code with TinyCC (`tcc`) if available, otherwise falls back to `gcc`. Execution is sandboxed only by a short timeout.
 
+<img width="680" height="228" alt="image" src="https://github.com/user-attachments/assets/b1551909-1f52-4c5d-99f4-3d13460054dd" />
+
 ## Requirements
 
 - Node.js 18+
